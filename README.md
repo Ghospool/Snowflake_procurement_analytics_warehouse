@@ -178,10 +178,6 @@ This is a portfolio-scale reference implementation. It uses one currency, a fixe
 
 A dashboard, dbt project, scheduler, CI workflow, and measured cloud benchmark are not included.
 
-## Publishing and reuse
-
-See the [publishing checklist](docs/publishing.md) for a clean source-only export, suggested repository description/topics, and publication steps. No software license has been selected; add your chosen license before granting reuse rights. No license or employment affiliation is implied.
-
 ## Sources
 
 - [Snowflake COPY INTO table](https://docs.snowflake.com/en/sql-reference/sql/copy-into-table)
