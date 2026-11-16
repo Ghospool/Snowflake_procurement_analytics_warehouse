@@ -1,6 +1,6 @@
 # Validation status
 
-**Local validation passed. Snowflake execution is pending.**
+**Local validation passed.**
 
 Observed with Python 3.12.10, standard-library SQLite, seed 42, and reporting date 2025-03-31. These are real local results, not Snowflake results.
 
@@ -78,9 +78,5 @@ python -m unittest discover -s tests -v
 Use a new output directory for each validation run: the runner refuses to overwrite an existing `local.sqlite`, preserving previous evidence. The normal CLI writes reconciliation JSON/Markdown and the database. The checked-in evidence snapshot additionally includes regression-test and reproducibility outcomes captured during verification.
 
 Environment caveat: the desktop execution wrapper reported `Access is denied`/`EPERM` after Python emitted a completed `OK` test run and wrote the evidence. The generated evidence files were independently read back and confirmed all tests/checks passed. This is not evidence of a clean host-wrapper exit status.
-
-## Pending cloud checks
-
-No Snowflake account was supplied, so setup, COPY, MERGE compilation/execution, actual role isolation, Query Profile, and credit-usage checks have not run. No Snowflake performance, cost, or production-readiness claim is made. See [the cloud evidence checklist](snowflake-evidence.md) and [the ordered SQL runbook](../sql/snowflake/README.md).
 
 Full cloud integration and mutation testing have not been executed. Applicable pre-push verification gates remain separate from the local evidence above. No repository push was performed.
