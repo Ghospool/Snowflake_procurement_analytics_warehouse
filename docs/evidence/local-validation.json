@@ -1,0 +1,75 @@
+{
+  "evidence_type": "recorded_local_validation_snapshot",
+  "provenance": "Derived from the completed local test summary, reconciliation report, and independent database checks; private paths and raw outputs omitted.",
+  "engine": "Python 3.12.10 standard-library sqlite3",
+  "seed": 42,
+  "reporting_date": "2025-03-31",
+  "currency": "USD",
+  "monetary_unit": "integer_cents",
+  "local_validation_passed": true,
+  "generator_application_exit": 0,
+  "validator_application_exit": 0,
+  "regression_tests": {
+    "run": 12,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "reconciliation_checks": {
+    "run": 227,
+    "failed": 0,
+    "passed": true
+  },
+  "same_seed_all_13_files_byte_identical": true,
+  "different_seed_changes_output": true,
+  "source_unchanged_during_test_run": true,
+  "sqlite_integrity_check": "ok",
+  "phases": [
+    { "phase": "base", "applied_rows": 1168 },
+    { "phase": "base_replay", "applied_rows": 0 },
+    { "phase": "correction", "applied_rows": 4 },
+    { "phase": "correction_replay", "applied_rows": 0 }
+  ],
+  "corrected_source_to_fact": [
+    {
+      "fact": "fact_purchasing",
+      "source_rows": 370,
+      "fact_rows": 370,
+      "source_cents": 29024791,
+      "fact_cents": 29024791
+    },
+    {
+      "fact": "fact_invoice",
+      "source_rows": 391,
+      "fact_rows": 391,
+      "source_cents": 19797895,
+      "fact_cents": 19797895
+    },
+    {
+      "fact": "fact_payment",
+      "source_rows": 120,
+      "fact_rows": 120,
+      "source_cents": 13713761,
+      "fact_cents": 13713761
+    }
+  ],
+  "as_of_outputs": {
+    "invoiced_spend_cents": 19797895,
+    "top_five_supplier_share": 0.32132456506108353,
+    "no_po_spend_cents": 2161696,
+    "invalid_po_reference_spend_cents": 7000,
+    "overdue_invoice_count": 53,
+    "overdue_positive_balance_cents": 5682480
+  },
+  "tested_source_sha256": {
+    "scripts/generate_data.py": "22417659d4a0f8a192b5b1b76ef58a31e1732ebfe13db7f7ef448a7158a8d0d6",
+    "scripts/validate_local.py": "3c44b1d670943eece851ce5ca223801a6671f66c7de1ef5a8a12db72b619e302",
+    "tests/test_validate_local.py": "f204d0f7f4b7534754e67f7bf91b55eb6154b5ed01cd0349e7782b972add6031",
+    "sql/local/001_marts.sql": "1595a0139a242f8efa97ea01c04afa3d2d2b9b4e3cc99396ff21f7cd54fc963b"
+  },
+  "host_wrapper_caveat": "The runner emitted an Access is denied/EPERM warning after completed Python output. Saved evidence was read back and database totals were independently checked; a clean host-wrapper exit is not claimed.",
+  "snowflake_execution": "not_run_requires_account_and_authorized_client",
+  "snowflake_performance_and_cost_measurements": "not_run",
+  "mutation_testing": "not_run",
+  "ci_workflow": "not_included"
+}
