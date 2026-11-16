@@ -2,8 +2,7 @@
 
 **Local validation passed.**
 
-Observed with Python 3.12.10, standard-library SQLite, seed 42, and reporting date 2025-03-31. These are real local results, not Snowflake results.
-
+Observed with Python 3.12.10, standard-library SQLite, seed 42, and reporting date 2025-03-31. These are real local results.
 ## Executed checks
 
 | Check | Observed result |
