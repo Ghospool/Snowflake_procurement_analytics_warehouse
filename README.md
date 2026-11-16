@@ -187,3 +187,15 @@ See the [publishing checklist](docs/publishing.md) for a clean source-only expor
 - [Snowflake COPY INTO table](https://docs.snowflake.com/en/sql-reference/sql/copy-into-table)
 - [Snowflake MERGE](https://docs.snowflake.com/en/sql-reference/sql/merge)
 - [Snowflake Query History and Query Profile](https://docs.snowflake.com/en/user-guide/ui-snowsight-activity)
+
+## License
+
+Project code and documentation are offered under the [MIT License](LICENSE), copyright 2026 Ghospool. Python, SQLite, Snowflake, and other third-party dependencies and services retain their own licenses and are not redistributed as installed environments or application binaries.
+
+All generated procurement records are fictional. No employer, supplier, customer, or other proprietary business data is included.
+
+## Publishing and reuse
+
+See the [publishing checklist](docs/publishing.md) for a clean source-only export, suggested repository description/topics, and publication steps.
+
+This repository is a portfolio-scale reference implementation. The local Python/SQLite pipeline has been verified as documented, while the Snowflake implementation remains unverified in a live cloud environment. Reuse of the code does not imply production readiness, verified cloud compatibility, or employment affiliation.
